@@ -15,7 +15,9 @@ body {
     max-width: 1200px;
     padding: 5% 0;
     margin: 0 auto;
-    padding-top: 12px;
+    padding-top: 15px;
+    /* display: flex;
+    align-items: flex-start; */
 }
 
 .app-header {
@@ -30,7 +32,7 @@ body {
     width: 200px;
     height: 39px;
     background-color: #e8f0f7;
-    font-size:  14px;
+    font-size:  16px;
     border: none;
     color: #36ba9b;
     font-weight: bold;    
@@ -43,3 +45,69 @@ body {
     color: #fff;
     background-size: 200% auto;
 }
+
+.menu-container{
+    background-color: white;
+    width: 20%;
+    height: 300px;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 20px 20px 0 20px; 
+    -webkit-box-shadow: 0 0 4px 0 rgb(0 0 0 / 30%)   
+}
+
+.menu-header{
+    color: #6194A0;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    align-items: center;
+    justify-content: left;
+    padding: 0 0 10px 10px;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    gap: 7px;
+    margin-top: 5px;
+}
+
+.menu-content{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top: 20px;
+    /* margin-bottom: 30px;    */
+}
+
+.menu-button{
+    border-radius: 5px;
+    margin: 5px 0 5px 0;
+    border: none;
+    height: 2.5rem;
+    /* background-color: #42E695; */
+    background-color: #F7FBFC;
+    color: #6194A0;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    padding: 5px 0px 5px 20px; 
+    align-items: center;
+}
+
+.menu-button:hover{
+    background-color: #6194A0;
+    color: #F7FBFC;
+    cursor: pointer;
+    border: none;
+}
+
+
+.item-card{
+    /* display: flex;
+    flex-direction: column; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+}
+
