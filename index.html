@@ -6,22 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="projeto.js">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>  
+
 </head>
 <body>
-    <div class="app">
-        <header class="app-header">
-            <img src="img/icon-cafeapp.png" alt="">
-            <button>Saldo geral</button>
-        </header>
+    <header class="app-header">
+        <img src="img/icon-cafeapp.png" alt="">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Nova transação
+        </button>
+        <!-- <button>Saldo geral</button> -->
+    </header>
+    <div class="app">        
         <aside class="menu-container">
             <div class="menu-header">
                 <img src="img/user.png" alt="">
                 <p> Henrique</p>
             </div>
             <nav class="menu-content">
-                <ul>
-                    
-                </ul>              
+                <button class="menu-button" type="button">
+                    <img src="img/saida.png" alt="">
+                    <span>Cadastrar Receitas</span> 
+                </button>
+                <button class="menu-button" type="button">
+                    <img src="img/saida.png" alt="">
+                    <span>Cadastrar Despesas</span> 
+                </button>
                 <button class="menu-button" type="button">
                     <!-- <img src="img/home.png" alt="home"> -->
                     <span>Controle</span> 
@@ -37,37 +51,115 @@
                 <button class="menu-button" type="button">
                     <img src="img/saida.png" alt="">
                     <span>Pagar</span> 
-                </button>
+                </button>                
             </nav>
         </aside>
-        <main>
-            <div class="item-card">
-                <div>
-                    <p>Entradas</p>
-                    <!-- <img src="./assets/income.svg" alt=""> -->
+        <main class="app-main-container">
+            <div class="app-main-header">
+                <div class="app-item-card-receita">
+                    <div class="item-card-content">
+                        <p>Receitas</p>
+                        <img src="" alt="">
+                    </div>                    
+                    <p class="valor">5.000,00 R$</p>                    
                 </div>
-                <strong>R$ 1000,00</strong>
-            </div>
-            <div class="item-card">
-                <div>
-                    <p>Saída</p>
-                    <!-- <img src="./assets/outcome.svg" alt=""> -->
+                <div class="app-item-card-despesa">
+                    <div class="item-card-content">
+                        <p>Despesas</p>
+                        <img src="" alt="">
+                    </div>                    
+                    <p class="valor">3.000,00 R$</p>                    
                 </div>
-                <strong>R$ 1000,00</strong>
-            </div>
-            <div class="item-card colortotal">
-                <div>
-                    <p>Total</p>
-                    <!-- <img src="./assets/total.svg" alt=""> -->
+                <div class="app-item-card-saldo">
+                    <div class="item-card-content">
+                        <p>Saldo</p>
+                        <img src="" alt="">
+                    </div>                    
+                    <p class="valor">2.000,00 R$</p>                    
                 </div>
-                <strong>R$ 1000,00</strong>
+                <div class="app-item-card">
+                    <div class="item-card-content">
+                        <p>Investimentos</p>
+                        <img src="" alt="">
+                    </div>                    
+                    <p class="valor">1.000,00 R$</p>                    
+                </div>  
+                <div class="app-item-card">
+                    <div class="item-card-content">
+                        <p>Outros</p>
+                        <img src="" alt="">
+                    </div>                    
+                    <p class="valor">1.000,00 R$</p>                    
+                </div>               
             </div>
-            <!-- <div class="item-card">
-                <p>Entradas</p>
-                <p>Saidas</p>
-                <p>Total</p>
-            </div> -->
+            <div class="app-main">
+                <div class="app-grafico">
+                    <p>Grafico</p>
+                    <figure class="highcharts-figure">
+                        <div id="container"></div>
+                        <p class="highcharts-description">
+                            Chart showing overlapping placement of columns, using different data
+                            series. The chart is also using multiple y-axes, allowing data in
+                            different ranges to be visualized on the same chart.
+                        </p>
+                    </figure>
+                </div>                   
+            </div>   
+            <div class="app-analise">
+                <p>Analises</p>
+                <span> Os resultados sao bons no momento, mas podem ser melhorados</span>
+            </div>           
         </main>        
+    </div>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Cadastrar transação</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-body-input">
+                        <div class="input">
+                            <input type="text" placeholder="Descrição da transação">
+                        </div>
+                        <div class="input">
+                            <input type="number" placeholder="Valor">
+                        </div>
+
+                        <div class="radio">
+                                <input type="radio" id="entrada" name="tipo_movimentacao" value="entrada">                                
+                                <label for="entrada">
+                                    <img src="./assets/income.svg" alt="">
+                                    <span>Entrada</span>                                
+                                </label>                        
+                        
+
+                                <input type="radio" id="saida" name="tipo_movimentacao" value="saida"> 
+                                <label for="saida">                                
+                                    <img src="./assets/outcome.svg" alt="">
+                                    <span>Saída</span>
+                                </label>         
+                        
+                            
+                        </div>
+                        
+                        <div class="input">
+                            <input type="text" placeholder="Categoria">
+                        </div>
+                        <div >
+                            <button class="btn-cadastrar">Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
     </div>
 </body>
 </html>
