@@ -3,23 +3,23 @@ Highcharts.chart('container', {
         type: 'column'
     },
     title: {
-        text: 'Efficiency Optimization by Branch'
+        text: 'Metas Planejadas x Realizadas'
     },
     xAxis: {
         categories: [
-            'Seattle HQ',
-            'San Francisco',
-            'Tokyo'
+            'Alimentação',
+            'Lazer',
+            'Saúde'
         ]
     },
     yAxis: [{
         min: 0,
         title: {
-            text: 'Employees'
+            text: ''
         }
     }, {
         title: {
-            text: 'Profit (millions)'
+            text: ''
         },
         opposite: true
     }],
@@ -72,3 +72,5 @@ Highcharts.chart('container', {
         yAxis: 1
     }]
 });
+
+// GRAFICO DE COLUNAS E BARRAS
