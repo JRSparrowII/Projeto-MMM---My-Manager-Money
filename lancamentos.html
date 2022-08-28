@@ -5,47 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/lancamentos.css">    
-    
-
+    <link rel="stylesheet" href="css/lancamentos.css">  
+    <link rel="stylesheet" href="css/styles.css">   
 </head>
-<body>
-    <div class="conteudo-tabela">
-        <table>
-            <thead>
-                <tr>
-                    <th>Data de Lançamento</th>
-                    <th>Classificação</th>
-                    <th>Conta</th>
-                    <th>Forma de Pagamento</th>
-                    <th>Banco</th>
-                    <th>Valor</th>
-                    <th>Histórico</th>
-                    <th>Ações</th>                    
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>10/08/2022</td>
-                    <td>Receitas</td>
-                    <td>Salario</td>
-                    <td>À vista</td>
-                    <td>Dinheiro</td>
-                    <td class="cor-saida"> 5.000,00 R$</td>
-                    <td>Valor ref. salário do mes de Agosto</td>                    
-                    <td>Excluir</td>
-                </tr>
-                <tr>
-                    <td>15/08/2022</td>
-                    <td>Alimentação</td>
-                    <td>Pizza</td>
-                    <td>À vista</td>
-                    <td>Dinheiro</td>
-                    <td class="cor-saida"> -50,00 R$</td>
-                    <td>Valor ref. saida com a familia</td>                    
-                    <td>Excluir</td>
-                </tr>             
-            </tbody>
-          </table>
-    </div>
+<body> 
+    <header class="app-header">
+        <img src="img/icon-cafeapp.png" alt="">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Nova transação
+        </button>
+        <!-- <button>Saldo geral</button> -->
+    </header>
+    <div class="app">        
+        <aside class="menu-container">
+            <div class="menu-header">
+                <img src="img/user.png" alt="">
+                <p> Henrique</p>
+            </div>
+            <nav class="menu-content">
+                <button class="menu-button" type="button">
+                    <img src="img/saida.png" alt="">
+                    <span>Cadastrar Receitas</span> 
+                </button>
+                <button class="menu-button" type="button">
+                    <img src="img/saida.png" alt="">
+                    <span>Cadastrar Despesas</span> 
+                </button>
+                <button class="menu-button" type="button">
+                    <!-- <img src="img/home.png" alt="home"> -->
+                    <span>Controle</span> 
+                </button>
+                <button class="menu-button" type="button">
+                    <img src="img/wallet.png" alt="wallet">
+                    <a href="gastosmensais.html"></a>
+                    <span>Carteiras</span>                     
+                </button>
+                <button class="menu-button" type="button">
+                    <img src="img/receber.png" alt="receber">
+                    <span>Receber</span> 
+                </button>
+                <button class="menu-button" type="button">
+                    <img src="img/saida.png" alt="">
+                    <span>Pagar</span> 
+                </button>                
+            </nav>
+        </aside>
+        <main class="app-main-container">            
+            <div class="app-main">
+                <div class="app-grafico">                    
+                    <div class="conteudo-tabela">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Data de Lançamento</th>
+                                    <th>Classificação</th>
+                                    <th>Conta</th>
+                                    <th>Forma de Pagamento</th>
+                                    <th>Banco</th>
+                                    <th>Valor</th>
+                                    <th class="historico">Histórico</th>
+                                    <th>Ações</th>                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10/08/2022</td>
+                                    <td>Receitas</td>
+                                    <td>Salario</td>
+                                    <td>À vista</td>
+                                    <td>Dinheiro</td>
+                                    <td class="cor-saida"> 5.000,00 R$</td>
+                                    <td>Valor ref. salário do mes de Agosto</td>                    
+                                    <td class="acoes">
+                                        <img src="img/lixo.png" alt="lixo">
+                                        <img src="img/pencil.png" alt="pencil">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>15/08/2022</td>
+                                    <td>Alimentação</td>
+                                    <td>Pizza</td>
+                                    <td>À vista</td>
+                                    <td>Dinheiro</td>
+                                    <td class="cor-saida"> -50,00 R$</td>
+                                    <td>Valor ref. saida com a familia</td>                    
+                                    <td>Excluir</td>
+                                </tr>       
+                                <tr>
+                                    <td>15/08/2022</td>
+                                    <td>Alimentação</td>
+                                    <td>Pizza</td>
+                                    <td>À vista</td>
+                                    <td>Dinheiro</td>
+                                    <td class="cor-saida"> -50,00 R$</td>
+                                    <td>Valor ref. saida com a familia</td>                    
+                                    <td>Excluir</td>
+                                </tr>         
+                            </tbody>
+                          </table>
+                    </div>
+                </div>                   
+            </div>                      
+        </main>        
+    </div> 
+    
 </body>
