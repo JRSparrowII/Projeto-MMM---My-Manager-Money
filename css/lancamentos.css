@@ -37,7 +37,7 @@ body {
     text-align: center;
     font-size: 12px;
     line-height: 16px;
-    /* background-color:  #6194A0; */
+    background-color:  #6194A0;
     /* border-radius: 5px; */
 }
 
@@ -51,15 +51,13 @@ body {
 }
 
 .conteudo-tabela table tbody tr:hover {
-    /* background-color:  #6194A0; */
+    background-color:  #6194A0;
     color: white;
 }
 
-.conteudo-tabela table tbody td  {
-    /* background-color: #F7FBFC;     */
+.conteudo-tabela table tbody td  {    
     padding: 8px 16px 8px 16px;
-    font-size: 13px;   
-    color:#6194A0; 
+    font-size: 13px;       
     text-align: center;  
     font-weight: 500;
 }

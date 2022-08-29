@@ -5,74 +5,178 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/lancamentos.css">    
+    <link rel="stylesheet" href="css/lancamentos.css">  
+    <link rel="stylesheet" href="css/styles.css">  
 </head>
-<header>Relatório de Contas</header>
+<!-- <header>Relatório de Contas</header> -->
 <body>
-    <div class="conteudo-tabela">
-        <table>
-            <thead>
-                <tr>
-                    <th>Controle de Faturas</th>
-                    <th>Banco do Brasil</th>
-                    <th>Banco Itaú</th>
-                    <th>Banco Inter</th>
-                    <th>Dinheiro</th>                                  
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Janeiro</td>
-                    <td>3.000,00 R$</td>
-                    <td>3.000,00 R$</td>
-                    <td>3.000,00 R$</td>
-                    <td>3.000,00 R$</td>                   
-                </tr>
-                <tr>
-                    <td>Fevereiro</td>
-                    <td>3.000,00 R$</td>
-                    <td>3.000,00 R$</td>
-                    <td>3.000,00 R$</td>
-                    <td>3.000,00 R$</td> 
-                </tr>       
-                <tr>
-                    <td>Março</td>
-                    <td>3.000,00 R$</td>
-                    <td>3.000,00 R$</td>
-                    <td>3.000,00 R$</td>
-                    <td>3.000,00 R$</td> 
-                </tr>   
-                <tr>
-                    <td>Abril</td>                
-                </tr>   
-                <tr>
-                    <td>Maio</td>                
-                </tr>
-                <tr>
-                    <td>Junho</td>                
-                </tr>
-                <tr>
-                    <td>Julho</td>                
-                </tr>
-                <tr>
-                    <td>Agosto</td>                
-                </tr>
-                <tr>
-                    <td>Setembro</td>                
-                </tr>
-                <tr>
-                    <td>Outubro</td>                
-                </tr>
-                <tr>
-                    <td>Novembro</td>                
-                </tr>
-                <tr>
-                    <td>Dezembro</td>                
-                </tr>  
-                <tr>
-                    <td>Total</td>                
-                </tr>  
-            </tbody>
-          </table>
+    <header class="app-header">
+        <img src="img/icon-cafeapp.png" alt="">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Nova transação
+        </button>
+        <!-- <button>Saldo geral</button> -->
+    </header>
+    <div class="app">        
+        <aside class="menu-container">
+            <div class="menu-header">
+                <img src="img/user.png" alt="">
+                <p> Henrique</p>
+            </div>
+            <nav class="menu-content">
+                <button class="menu-button" type="button">
+                    <img src="img/saida.png" alt="">
+                    <span>Cadastrar Receitas</span> 
+                </button>
+                <button class="menu-button" type="button">
+                    <img src="img/saida.png" alt="">
+                    <span>Cadastrar Despesas</span> 
+                </button>
+                <button class="menu-button" type="button">
+                    <!-- <img src="img/home.png" alt="home"> -->
+                    <span>Controle</span> 
+                </button>
+                <button class="menu-button" type="button">
+                    <img src="img/wallet.png" alt="wallet">
+                    <a href="gastosmensais.html"></a>
+                    <span>Carteiras</span>                     
+                </button>
+                <button class="menu-button" type="button">
+                    <img src="img/receber.png" alt="receber">
+                    <span>Receber</span> 
+                </button>
+                <button class="menu-button" type="button">
+                    <img src="img/saida.png" alt="">
+                    <span>Pagar</span> 
+                </button>                
+            </nav>
+        </aside>
+        <main class="app-main-container">            
+            <div class="app-main">
+                <div class="app-grafico">                    
+                    <div class="conteudo-tabela">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Controle de Faturas</th>
+                                    <th>Banco do Brasil</th>
+                                    <th>Banco Itaú</th>
+                                    <th>Banco Inter</th>
+                                    <th>Dinheiro</th>  
+                                    <th>Banco Caixa</th>                                
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Janeiro</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td> 
+                                    <td>3.000,00 R$</td>                   
+                                </tr>
+                                <tr>
+                                    <td>Fevereiro</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td> 
+                                    <td>3.000,00 R$</td> 
+                                </tr>       
+                                <tr>
+                                    <td>Março</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td> 
+                                    <td>3.000,00 R$</td> 
+                                </tr>   
+                                <tr>
+                                    <td>Abril</td> 
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>  
+                                    <td>3.000,00 R$</td>               
+                                </tr>   
+                                <tr>
+                                    <td>Maio</td> 
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>                 
+                                </tr>
+                                <tr>
+                                    <td>Junho</td> 
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td> 
+                                    <td>3.000,00 R$</td>                
+                                </tr>
+                                <tr>
+                                    <td>Julho</td>  
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td> 
+                                    <td>3.000,00 R$</td>               
+                                </tr>
+                                <tr>
+                                    <td>Agosto</td> 
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td> 
+                                    <td>3.000,00 R$</td>                
+                                </tr>
+                                <tr>
+                                    <td>Setembro</td> 
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td> 
+                                    <td>3.000,00 R$</td>                
+                                </tr>
+                                <tr>
+                                    <td>Outubro</td> 
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>                 
+                                </tr>
+                                <tr>
+                                    <td>Novembro</td> 
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td> 
+                                    <td>3.000,00 R$</td>                
+                                </tr>
+                                <tr>
+                                    <td>Dezembro</td> 
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td> 
+                                    <td>3.000,00 R$</td>                
+                                </tr>  
+                                <tr>
+                                    <td>Total</td>  
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td>
+                                    <td>3.000,00 R$</td> 
+                                    <td>3.000,00 R$</td>               
+                                </tr>  
+                            </tbody>
+                          </table>
+                    </div>                
+                </div>                   
+            </div>                      
+        </main>    
     </div>
+    
 </body>
